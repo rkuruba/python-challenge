@@ -19,12 +19,34 @@ with open(election_csv, 'r') as csvfile:
     array = []
     difference = []
     unique_list = []
+    voterID = []
+    county = []
+    candidate = []
+    j = 0
     for row in csvreader:
         i = i + 1
         if row[1] not in unique_list:
             unique_list.append(row[1])
-    for x in unique_list: 
-        print (x)
+            #print(row[1])
+        voterID(row[0])
+        county(row[1])
+        candidate(row[2])
+    print(unique_list)
+    print(voterID)
+    #print(csvreader)
+    for x in unique_list:
+        y.append(0)
+        for  in csvreader:
+            print(row[1])
+            if x == row[1]:
+                y[j] = y[j] + int(row[2])
+        j = j + 1
+    print(y)
+    for x in csvreader:
+        i = i + 1 
+        print(x[1])
+        #if row[1] in unique_list:
+          #  print(row[1][i])
     print(f"Total number of votes: {i}")
     i = 0
     high = 0
